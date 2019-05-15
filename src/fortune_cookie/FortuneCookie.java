@@ -8,20 +8,26 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-public class FortuneCookie implements ActionListener {
+public class FortuneCookie implements ActionListener {	
+	JButton button = new JButton("click for fortune");
 public void showButton() {
 	JFrame frame = new JFrame();
 	frame.setVisible(true);
-	JButton button = new JButton();
+	System.out.println("rand");
 	frame.add(button);
 	frame.pack();
 	button.addActionListener(this);
-	actionPerformed();
 }
-public void actionPerformed() {
+
+public static void main(String[] args) {
+	new FortuneCookie().showButton();
+}
+@Override
+public void actionPerformed(ActionEvent e) {
 	int rand = new Random().nextInt(5);
+
 	if(rand==4) {
-		JOptionPane.showMessageDialog(null, "Be nice");
+		JOptionPane.showMessageDialog(null, "Someone likes you");
 	}
 	else if(rand==3) {
 		JOptionPane.showMessageDialog(null, "Someone hates you");
@@ -35,13 +41,6 @@ public void actionPerformed() {
 	else if(rand==0) {
 		JOptionPane.showMessageDialog(null, "Somone doesn't absolutely hate you");
 	}
-}
-public static void main(String[] args) {
-	new FortuneCookie().showButton();
-}
-@Override
-public void actionPerformed(ActionEvent e) {
-	// TODO Auto-generated method stub
 	
 }
 

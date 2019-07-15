@@ -77,36 +77,31 @@ int score = 0;
 			score++;
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "Incorrect. The correct answer is Jack.");
+			JOptionPane.showMessageDialog(null, "Incorrect. The correct answer is Leonardo.");
 		}
 		showNextImage();
 		String input3 = JOptionPane.showInputDialog("Who is this? (First name only)");
-		if(input3.equals("Jack")) {
+		if(input3.equals("Morgan")) {
 			JOptionPane.showMessageDialog(null, "You got it right. Congratulations");
 			score ++;
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "Incorrect. The correct answer is Leonardo.");
+			JOptionPane.showMessageDialog(null, "Incorrect. The correct answer is Morgan.");
 		}
 		showNextImage();
 		String input4 = JOptionPane.showInputDialog("Who is this?");
-		if(input4.equals("Morgan")) {
+		if(input4.equals("Jack")) {
 			JOptionPane.showMessageDialog(null, "You got it right. Congratulations");
 			score++;
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "Incorrect. The correct answer is Morgan");
+			JOptionPane.showMessageDialog(null, "Incorrect. The correct answer is Jack");
 		}
 		// 9. Show them their current score
-		if(score<=1) {
-			JOptionPane.showMessageDialog(null, "You suck.");
-		}
-		else if(score>=3) {
-			JOptionPane.showMessageDialog(null, "Try-hard");
-		}
-		else{
-			JOptionPane.showMessageDialog(null, "You got " + score + "out of 4.");
-		}
+	
+		
+			JOptionPane.showMessageDialog(null, "You got " + score + " out of 4.");
+	
 		
 	}
 
